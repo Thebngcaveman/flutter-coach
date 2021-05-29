@@ -38,7 +38,7 @@ class HomeScreen extends StatelessWidget {
                 height: 100.0,
                 color: Colors.white,
                 child: Text(
-                  'Get Coaching',
+                  'Explore Your Contact',
                   style: TextStyle(
                     fontFamily: 'Montserrat',
                     fontSize: 20.0,
@@ -65,7 +65,7 @@ class HomeScreen extends StatelessWidget {
                         Container(
                           padding: EdgeInsets.fromLTRB(25, 25, 5, 5),
                           child: Text(
-                            "You Have",
+                            "Your Contact",
                             style: TextStyle(
                               color: Colors.grey,
                               fontWeight: FontWeight.bold,
@@ -74,9 +74,9 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          padding: EdgeInsets.fromLTRB(25, 40, 5, 5),
+                          padding: EdgeInsets.fromLTRB(25, 40, 5, 25),
                           child: Text(
-                            "400",
+                            "6", //TODO MAKE THIS DYNAMIC
                             style: TextStyle(
                               color: Colors.black,
                               fontWeight: FontWeight.bold,
@@ -90,7 +90,7 @@ class HomeScreen extends StatelessWidget {
                       width: 100,
                     ),
                     Container(
-                      height: 50,
+                      height: 60,
                       width: 125,
                       decoration: BoxDecoration(
                         color: Colors.greenAccent[100],
@@ -150,10 +150,40 @@ class HomeScreen extends StatelessWidget {
           GridView.count(
             crossAxisCount: 2,
             crossAxisSpacing: 2,
+            primary: false,
             mainAxisSpacing: 4,
             shrinkWrap: true,
             children: <Widget>[
-              CoachCard(),
+              CoachCard(
+                name: "Emma",
+                status: "Away",
+                cardIndex: 1,
+              ),
+              CoachCard(
+                name: "William",
+                status: "Available",
+                cardIndex: 2,
+              ),
+              CoachCard(
+                name: "Josh",
+                status: "Available",
+                cardIndex: 3,
+              ),
+              CoachCard(
+                name: "Watson",
+                status: "Available",
+                cardIndex: 4,
+              ),
+              CoachCard(
+                name: "Jane",
+                status: "Away",
+                cardIndex: 5,
+              ),
+              CoachCard(
+                name: "Robert",
+                status: "Away",
+                cardIndex: 6,
+              ),
             ],
           ),
         ],
